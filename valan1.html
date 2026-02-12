@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy valantines day baby😘</title>
+  <style>
+    body {
+      background: linear-gradient(to right, #ff9a9e, #fad0c4);
+      font-family: 'Comic Sans MS', cursive, sans-serif;
+      text-align: center;
+      padding: 5vw;
+      margin: 0;
+    }
+
+    .card {
+      background-color: white;
+      padding: 5vw;
+      border-radius: 20px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+      max-width: 600px;
+      margin: auto;
+    }
+
+    h1 {
+      color: #ff4081;
+      font-size: clamp(24px, 7vw, 48px);
+    }
+
+    h2 {
+      color: #333;
+      margin-top: 10px;
+      font-size: 5vw;
+    }
+
+    p {
+      font-size: 4vw;
+      color: #555;
+      line-height: 1.6;
+    }
+
+    .balloons {
+      font-size: 6vw;
+    }
+
+    .footer {
+      margin-top: 20px;
+      color: #999;
+      font-size: 3.5vw;
+    }
+
+    .friend-pic {
+      width: 100%;
+      max-width: 500px;
+      border-radius: 15px;
+      margin: 20px 0;
+    }
+
+    @media (min-width: 768px) {
+      h1 {
+        font-size: 48px;
+      }
+
+      h2 {
+        font-size: 28px;
+      }
+
+      p {
+        font-size: 20px;
+      }
+
+      .balloons {
+        font-size: 40px;
+      }
+
+      .footer {
+        font-size: 14px;
+      }
+    }
+
+#yesBtn2, #noBtn2 {
+  padding: 12px 22px;
+  border-radius: 999px;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  background: #ff4081;   /* same color */
+  color: white;
+  transition: left 0.25s ease, top 0.25s ease;
+}
+
+#noBtn2 {
+  position: relative;
+}
+
+.hearts {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: -1;
+}
+
+.heart {
+  position: absolute;
+  top: -10px;
+  font-size: 20px;
+  animation: fall linear forwards;
+}
+
+@keyframes fall {
+  to {
+    transform: translateY(110vh);
+    opacity: 0;
+  }
+}
+
+  </style>
+</head>
+<body>
+  <div class="hearts" id="hearts"></div>
+
+  <div class="card">
+    <h1>Happy valantinesday jaanu</h1>
+    <h2>To my life🧬, my love💖, and my future🌏</h2>
+
+    <p>Hey baby, how are youuuuuuu? I'm missing you so much, I made this to tell you how much you mean to me, I really love you, like since the day you came in my life, it's been nothing but filled with colours I never knew existed, I'm so thankful for you for lighing up my life with your face, every I love you you send, my heart races, every single dirty message you send, I smile like an idiot, I really love you, like I love you too much, if you go, I go die, I'm nothing without you, just know that I love you and I miss you so much, text me soon </p>
+ <div class = "footer"> I love you with all my heart and I'm gonna marry you one day💍
+</div>
+</div>
+</div>
+
+<script>
+const noBtn2 = document.getElementById("noBtn2");
+
+let currentX = 0;
+let currentY = 0;
+
+function moveNo2() {
+  const step = 400; // small noticeable nudge
+  currentX += (Math.random() - 0.5) * step;
+  currentY += (Math.random() - 0.5) * step;
+
+  noBtn2.style.left = currentX + "px";
+  noBtn2.style.top = currentY + "px";
+}
+
+noBtn2.addEventListener("mouseover", moveNo2);
+noBtn2.addEventListener("click", moveNo2);
+</script>
+
+<script>
+const hearts = document.getElementById("hearts");
+
+function createHeart() {
+  const h = document.createElement("div");
+  h.className = "heart";
+  h.textContent = "💗";
+
+  h.style.left = Math.random() * 100 + "vw";
+  h.style.animationDuration = (Math.random() * 3 + 3) + "s";
+  h.style.fontSize = (Math.random() * 10 + 15) + "px";
+
+  hearts.appendChild(h);
+
+  setTimeout(() => h.remove(), 6000);
+}
+
+setInterval(createHeart, 200);
+</script>
+
+</body>
+</html>
